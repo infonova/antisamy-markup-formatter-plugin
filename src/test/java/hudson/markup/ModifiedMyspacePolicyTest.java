@@ -12,7 +12,7 @@ import java.io.IOException;
 /**
  * @author Kohsuke Kawaguchi
  */
-public class MyspacePolicyTest extends Assert {
+public class ModifiedMyspacePolicyTest extends Assert {
     @Test
     public void testPolicy() {
         assertIntact("<a href='http://www.cloudbees.com'>CB</a>");
@@ -34,8 +34,6 @@ public class MyspacePolicyTest extends Assert {
         assertIntact("<table><tr><th>header</th></tr><tr><td>something</td></tr></table>");
         assertIntact("<h1>title</h1><blockquote>blurb</blockquote>");
 
-        assertReject("iframe", "<iframe src='nested'></iframe>");
-
         assertReject("script","<script>window.alert(5);</script>");
         assertReject("script","<script src='http://foo/evil.js'></script>");
         assertReject("script","<script src='relative.js'></script>");
@@ -52,12 +50,12 @@ public class MyspacePolicyTest extends Assert {
         input = input.replace('\'','\"');
         assertSanitize(input,input);
     }
-    
+
     private void assertReject(String problematic, String input) {
         String out = sanitize(input);
         assertFalse(out, out.contains(problematic));
     }
-    
+
     private void assertSanitize(String expected, String input) {
         assertEquals(expected,sanitize(input));
     }
