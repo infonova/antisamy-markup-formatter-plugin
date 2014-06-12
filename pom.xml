@@ -22,8 +22,8 @@
     </licenses>
 
     <scm>
-        <connection>scm:svn:http://grzsvn01.infonova.at/ise/tools/jenkins/plugins/antisamy-markup-formatter-plugin/trunk</connection>
-        <developerConnection>scm:svn:http://grzsvn01.infonova.at/ise/tools/jenkins/plugins/antisamy-markup-formatter-plugin/trunk</developerConnection>
+        <connection>scm:git:ssh://git.infonova.at:29418/jenkins/plugins/antisamy-markup-formatter-plugin.git</connection>
+        <developerConnection>scm:git:ssh://git.infonova.at:29418/jenkins/plugins/antisamy-markup-formatter-plugin.git</developerConnection>
         <url>http://grzsvn01.infonova.at/ise/tools/jenkins/plugins/antisamy-markup-formatter-plugin/trunk</url>
     </scm>
 
