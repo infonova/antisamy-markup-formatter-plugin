@@ -1,75 +1,76 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>org.jenkins-ci.plugins</groupId>
-        <artifactId>plugin</artifactId>
-        <version>1.554.3</version>
-    </parent>
+	<parent>
+		<groupId>org.jenkins-ci.plugins</groupId>
+		<artifactId>plugin</artifactId>
+		<version>1.554.3</version>
+	</parent>
 
-    <artifactId>antisamy-markup-formatter</artifactId>
-    <version>1.2-INFONOVA-1-SNAPSHOT</version>
-    <packaging>hpi</packaging>
-    <name>OWASP Markup Formatter Plugin</name>
-    <description>Uses policy definitions to allow limited HTML markup in user-submitted text.</description>
+	<artifactId>antisamy-markup-formatter</artifactId>
+	<version>1.2-INFONOVA-1-SNAPSHOT</version>
+	<packaging>hpi</packaging>
+	<name>OWASP Markup Formatter Plugin</name>
+	<description>Uses policy definitions to allow limited HTML markup in user-submitted text.</description>
 
-    <url>http://wiki.jenkins-ci.org/display/JENKINS/OWASP+Markup+Formatter+Plugin</url>
+	<url>http://wiki.jenkins-ci.org/display/JENKINS/OWASP+Markup+Formatter+Plugin</url>
 
-    <licenses>
-        <license>
-            <name>MIT</name>
-            <url>http://www.opensource.org/licenses/mit-license.php</url>
-        </license>
-    </licenses>
+	<licenses>
+		<license>
+			<name>MIT</name>
+			<url>http://www.opensource.org/licenses/mit-license.php</url>
+		</license>
+	</licenses>
 
-    <scm>
-        <connection>scm:git:ssh://git.infonova.at:29418/jenkins/plugins/antisamy-markup-formatter-plugin.git</connection>
-        <developerConnection>scm:git:ssh://git.infonova.at:29418/jenkins/plugins/antisamy-markup-formatter-plugin.git</developerConnection>
-        <url>http://grzsvn01.infonova.at/ise/tools/jenkins/plugins/antisamy-markup-formatter-plugin/trunk</url>
-    </scm>
+	<scm>
+		<connection>scm:git:ssh://git.infonova.at:29418/jenkins/plugins/antisamy-markup-formatter-plugin.git</connection>
+		<developerConnection>scm:git:ssh://git.infonova.at:29418/jenkins/plugins/antisamy-markup-formatter-plugin.git</developerConnection>
+		<url>http://grzsvn01.infonova.at/ise/tools/jenkins/plugins/antisamy-markup-formatter-plugin/trunk</url>
+	</scm>
 
-    <distributionManagement>
-        <repository>
-            <id>nexus-infonova</id>
-            <name>Nexus at Infonova</name>
-            <url>dav:http://grzmvn01.infonova.at:8082/nexus/content/repositories/ise-releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>nexus-infonova</id>
-            <name>Nexus at Infonova</name>
-            <url>dav:http://grzmvn01.infonova.at:8082/nexus/content/repositories/ise-snapshots/</url>
-            <uniqueVersion>false</uniqueVersion>
-        </snapshotRepository>
-    </distributionManagement>
+	<distributionManagement>
+		<repository>
+			<id>nexus-infonova</id>
+			<name>Nexus at Infonova</name>
+			<url>dav:http://grzmvn01.infonova.at:8082/nexus/content/repositories/ise-releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus-infonova</id>
+			<name>Nexus at Infonova</name>
+			<url>dav:http://grzmvn01.infonova.at:8082/nexus/content/repositories/ise-snapshots/</url>
+			<uniqueVersion>false</uniqueVersion>
+		</snapshotRepository>
+	</distributionManagement>
 
-    <repositories>
-        <repository>
-            <id>repo.jenkins-ci.org</id>
-            <url>http://repo.jenkins-ci.org/public/</url>
-        </repository>
-    </repositories>
+	<repositories>
+		<repository>
+			<id>repo.jenkins-ci.org</id>
+			<url>http://repo.jenkins-ci.org/public/</url>
+		</repository>
+	</repositories>
 
-    <build>
-        <extensions>
-            <extension>
-                <groupId>org.apache.maven.wagon</groupId>
-                <artifactId>wagon-webdav-jackrabbit</artifactId>
-                <version>2.4</version>
-            </extension>
-        </extensions>
-    </build>
+	<build>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-webdav-jackrabbit</artifactId>
+				<version>2.4</version>
+			</extension>
+		</extensions>
+	</build>
 
-    <pluginRepositories>
-        <pluginRepository>
-            <id>repo.jenkins-ci.org</id>
-            <url>http://repo.jenkins-ci.org/public/</url>
-        </pluginRepository>
-    </pluginRepositories>
-    <dependencies>
-        <dependency>
-            <groupId>org.kohsuke</groupId>
-            <artifactId>owasp-html-sanitizer</artifactId>
-            <version>r88</version>
-        </dependency>
-    </dependencies>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>repo.jenkins-ci.org</id>
+			<url>http://repo.jenkins-ci.org/public/</url>
+		</pluginRepository>
+	</pluginRepositories>
+	<dependencies>
+		<dependency>
+			<groupId>org.kohsuke</groupId>
+			<artifactId>owasp-html-sanitizer</artifactId>
+			<version>r88</version>
+		</dependency>
+	</dependencies>
 </project>
